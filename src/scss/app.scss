@@ -1,0 +1,49 @@
+/* Tailwind import */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Core variables */
+@import 'base/vars';
+
+/* CSS Reset */
+@import 'base/reset';
+
+/* CSS print */
+@import 'base/print';
+
+/* Fonts */
+@import 'base/fonts';
+
+/* Mixins, helpers and functions */
+@import 'base/mixins';
+
+/* Vendor */
+
+/* Components */
+/* Browser specific styles */
+@import 'dirty/hacks';
+
+
+/* Page layout */
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/index';
+// @import "@fancyapps/ui/dist/fancybox.css";
+/* Pages styles */
+@import 'demo';
+
+
+@import 'popups/css/popupS.css';
+
+@import 'wowjs/css/libs/animate.css';
+//@import 'swiper/swiper.scss';
+
+// @import url("choices.js/public/assets/styles/base.css");
+// @import url("choices.js/public/assets/styles/base.min.css");
+// @import url("choices.js/public/assets/styles/choices.css");
+// @import url("choices.js/public/assets/styles/choices.min.css");
+
+body{
+    @apply bg-backg;
+}
