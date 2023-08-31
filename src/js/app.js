@@ -1,113 +1,57 @@
 import '../scss/app.scss';
 
-// import Swiper, { Autoplay, EffectCards, EffectCreative, EffectFlip, Grid, Navigation, Pagination } from 'swiper';
-// Swiper.use([Navigation]);
-// import 'swiper/css';
-// import 'swiper/css/grid';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination'; //???
+import { swiper } from './initSwiper';
+import { burgerMenu } from './initBurgerMenu';
+// import { fancybox } from './fancybox';
+// import { initLists } from './initLists';
+// import { initIMask } from './initIMask';
+// import { initVideo } from './initVideo';
 
-// import { Fancybox } from "@fancyapps/ui/src/Fancybox/Fancybox.js";
 
-// import Choices from 'choices.js';
 
-// import lax from 'lax.js'
-
-// const popupS = require('popups');
 
 
 document.addEventListener('DOMContentLoaded', () => {
-   const swiper = new Swiper('.Popular-projects__slider', {
-    slidesPerView: 4,
-    spaceBetween: 41,
-    // centeredSlides: true,
-    // Optional parameters
-    direction: 'horizontal',
-    loop: false,
-
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.Popular-project-swiper-button-next',
-        prevEl: '.Popular-project-swiper-button-prev',
-    },
-    });
-
-   const Implement_project_swiper = new Swiper('.implemented-projects__slider', {
-       slidesPerView: "auto",
-       centeredSlides: true,
-       spaceBetween: 70,
-       loop: true,
-       pagination: {
-         el: ".swiper-pagination",
-         clickable: true,
-       },
-        // Navigation arrows
-        navigation: {
-            nextEl: '.implemented-projects-swiper-button-next',
-            prevEl: '.implemented-projects-swiper-button-prev',
-        },
-    });
-
-
-    const reviews_swiper = new Swiper('.reviews__slider', {
-        slidesPerView: "auto",
-        centeredSlides: true,
-        spaceBetween: 70,
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        // Navigation arrows
-        navigation: {
-            nextEl: '.reviews-swiper-button-next',
-            prevEl: '.reviews-swiper-button-prev',
-        },
-    });
-
-
+    init();
 });
-
-//- <script>
-//-   const swiper = new Swiper('.Popular-projects__slider', {
-//-   slidesPerView: 4,
-//-   spaceBetween: 41,
-//-   // centeredSlides: true,
-//-   // Optional parameters
-//-   direction: 'horizontal',
-//-   loop: false,
+  
+const init = () => {
+    swiper();
+    burgerMenu();
 
 
-//-   // Navigation arrows
-//-   navigation: {
-//-       nextEl: '.Popular-project-swiper-button-next',
-//-       prevEl: '.Popular-project-swiper-button-prev',
-//-   },
+    document.querySelector('.footer__blocks-block.expand').addEventListener('click', (el) =>{
+        document.querySelectorAll('.footer__blocks-block.close').forEach((elem) =>{
+            elem.classList.replace('close', 'open')
+            document.querySelector('.footer__blocks-block.expand').style.display = "none"
+        })
+    })
+    document.querySelector('.footer__blocks-block.collapse').addEventListener('click', (el) =>{
+        document.querySelectorAll('.footer__blocks-block.open').forEach((elem) =>{
+            elem.classList.replace('open', 'close')
+            document.querySelector('.footer__blocks-block.expand').style.display = "flex"
+        })
+    })
 
-//-   });
-//- </script>
-
-
-
-
- //- <script>
-      //-     const reviews_swiper = new Swiper('.reviews__slider', {
-      //-         slidesPerView: "auto",
-      //-         centeredSlides: true,
-      //-         spaceBetween: 70,
-      //-         loop: true,
-      //-         pagination: {
-      //-           el: ".swiper-pagination",
-      //-           clickable: true,
-      //-         },
-
-
-      //-     // Navigation arrows
-      //-     navigation: {
-      //-         nextEl: '.reviews-swiper-button-next',
-      //-         prevEl: '.reviews-swiper-button-prev',
-      //-     },
-
-      //-     });
-      //-   </script>
+    //FAQ
+    document.querySelectorAll('.questions__question').forEach((elem) =>{
+        elem.addEventListener('click', async() =>{
+            let question = elem.querySelector('.questions__question-content')
+            let sign = elem.querySelector('.questions__question-sign')
+            if(question.classList.contains('inactive')){
+                elem.parentElement.querySelectorAll('.questions__question-content.active').forEach((button)=>{
+                    button.classList.replace("active", "inactive"); 
+                    button.parentElement.querySelector('.questions__question-sign').innerHTML = "+"                                   
+                })
+                
+                question.classList.replace('inactive', 'active')
+                sign.innerHTML = "-"
+            }
+            else{                
+                question.classList.replace('active', 'inactive')
+                sign.innerHTML = "+"
+            }
+        
+        })
+    })
+};

@@ -101,19 +101,19 @@ module.exports = {
           },
           '@screen md': {
             maxWidth: '720px',
-            padding: '0 27px',
+            padding: '0 30px',
           },
           '@screen lg': {
             maxWidth: '1024px',
-            padding: '0 51px',
+            padding: '0 35px',
           },
           '@screen 2lg': {
             maxWidth: '1280px',
-            padding: '0 31px',
+            padding: '0 50px',
           },
           '@screen xl': {
             maxWidth: '1440px',
-            padding: '0 80px',
+            padding: '0 90px',
           },
         }
       })

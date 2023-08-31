@@ -1,25 +1,16 @@
-.footer{
+.footer-wrapper{
     background-color: #2A333E;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer__blocks{
-    display: flex;
-    justify-content: space-between;
+    @apply grid gap-[50px] justify-center py-[50px] flex-col items-center;
+}
 
-    padding: 50px 0;
-    
-}
-.desktop{
-    @media (max-width: 720px) {
-        display: none !important;
-    }
-}
 .footer__blocks-block__menu{
     display: flex;
     flex-direction: column;
-
 }
-
 
 .footer__blocks-block__menu a:first-child{
     color:#BD3A48;
@@ -30,7 +21,6 @@
 
 .footer__blocks-block__menu a:not(:first-child){
     color:#FFFFFF;
-
     margin-top: 5px;
     font-weight: 400;
     font-size: 16px;
@@ -40,6 +30,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: -webkit-fill-available;
+    max-width: 200px;
 }
 
 .footer__blocks-block__numbers{
@@ -67,26 +59,15 @@
 }
 
 .footer__contact{
-    display: flex;
-    justify-content: space-between;
-
-    @media (max-width:720px) {
-        display: block;
-    }
+    @apply flex justify-between flex-col
 }
 
 .footer__contact-text{
-    color: #FFFFFF;
-    font-weight: 400;
-    font-size: 14px;
+    @apply text-white text-[14px] mb-[20px] max-w-[584px];
 }
 
 .footer__contact-links{
     display: flex;
-
-    @media (max-width:720px) {
-        margin-top: 15px;
-    }
 }
 .footer__contact-links a:not(:first-child){
     margin-left: 10px;
@@ -98,4 +79,45 @@
     color: #FFFFFF;
     font-weight: 600;
     font-size: 16px;
+}
+.footer__blocks-block.expand,
+.footer__blocks-block.collapse{
+    @apply text-white flex flex-col items-center
+}
+.footer__blocks-block.close{
+    @apply hidden
+}
+
+@media (min-width:480px ) {
+    
+}
+@media (min-width:720px ) {
+    .footer__blocks{
+        @apply grid-cols-2 justify-between items-start
+    }
+    
+    .footer__blocks-block.close{
+        @apply block
+    }
+    .footer__blocks-block.expand,
+    .footer__blocks-block.collapse{
+        @apply hidden
+    }
+}
+@media (min-width:1024px) {
+    .footer__blocks{
+        @apply grid-cols-4 
+    }
+    .footer__contact{
+        @apply flex-row
+    }
+    .footer__contact-text{
+        margin-bottom: 0px;
+    }
+}
+@media (min-width:1280px ) {
+    
+}
+@media (min-width:1440px ) {
+    
 }

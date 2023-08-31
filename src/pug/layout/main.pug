@@ -17,10 +17,42 @@ html(lang='ru')
   body(class="debug-screens")
     .wrapper
       .wrapper-page
-        .background-top
         include ../includes/header
         .wrapper-content
           block content
         include ../includes/footer
+    .modal-menu__wrapper.close(id="wrapper__burger-menu") 
+      .modal-menu__block(id="block__burger-menu")
+        button.modal-menu__close(type="button" id='burger__menu-close') 
+          img(src="../assets/img/close.svg")
+        .modal-menu__section
+          ul.modal-menu__list
+            li
+              a(href="#") Рассчитать стоимость
+            li
+              a(href="#") Примеры работ
+            li
+              a(href="#") Гарантии
+            li
+              a(href="#") Цены
+            li
+              a(href="#") Гаражи
+            li
+              a(href="#") Клиенту
+            li
+              a(href="#") Услуги
+            li
+              a(href="#") Контакты
+          .modal-menu__item-buttons
+            a.modal-menu__btn(href="#") 
+                img(src="../assets/img/favorite.svg")
+            a.modal-menu__btn(href="#") 
+                img(src="../assets/img/compare.svg")
+          .modal-menu__item-phones
+            a(href="tel:+78003002807") 8 800 300-28-07
+            a(href="tel:+78003002807") 8 800 300-28-07
+            a(href="tel:+78003002807") 8 800 300-28-07
+          .modal-menu__item-order
+            button(type="submit") Заказать звонок   
     block script
   
