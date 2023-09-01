@@ -1,4 +1,4 @@
-.section__title{
+.reviews-section__title{
     h1{
         font-size: 70px;
         font-weight: bolder;
@@ -74,8 +74,16 @@
 }
 
 
-
-
+@media (min-width: 1024px) {
+    .mobile{
+        display: none ;
+    }
+}
+@media (max-width: 1023px) {
+    .pc{
+        display: none;
+    }
+}
 
 @media (min-width: 1024px) {
     .reviews__reviews-grid{
