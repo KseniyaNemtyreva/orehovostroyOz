@@ -1,0 +1,83 @@
+.stocks-section__title{
+    h1{
+        font-size: 70px;
+        font-weight: 700;
+        color: var(--dark);
+    }
+}
+
+.permanent-stocks__title,
+.season-stocks__title{
+    h2{
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--dark_dark_blue);
+    }
+}
+
+
+.stocks-section__season-stocks{
+    .season-stocks__grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 55px;
+    
+        margin-top: 40px;
+    
+        @media (min-width: 1024px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+.permanent-stocks{
+    margin-top: 40px;
+    
+    .permanent-stocks__grid{
+        margin-top:40px ;
+        padding-bottom: 150px;
+    
+        .permanent-stocks__item{
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width:480px) {
+                flex-direction: row;
+                align-items: center;
+            }
+    
+            &:not(:last-child){
+                margin-bottom: 40px;
+            }
+
+            .permanent-stocks__item-picture{
+                img{
+                    min-width: 121px;
+                    min-height: 121px;
+                }
+            }
+        
+            .permanent-stocks__item-text{
+                
+                @media (min-width:480px) {
+                    padding: 10px 0px;
+                    margin-left: 10px;
+                }
+
+                h2{
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: var(--dark);
+                    
+                    @media (min-width:720px) {
+                        font-size: 24px;
+                    }
+                }
+                p{
+                    color: var(--dark);
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
