@@ -1,0 +1,35 @@
+.blog-detail-section__title{
+
+    h1{
+        font-size: 35px;
+        font-weight: 700;
+        color: var(--dark);
+
+        @media (min-width: 480px) {
+            font-size: 50px;
+        }
+        @media (min-width: 720px) {
+            font-size: 70px;
+        }
+    }
+}
+
+.blog-detail-section__picture{
+    margin-top: 40px;
+}
+
+.blog-detail-section__btn{
+
+    padding-bottom: 150px;
+
+    button{
+        font-size: 18px;
+        font-weight: 500;
+        color: #FFFFFF;
+
+        border-left: 6px solid var(--dark);
+
+        background-color: var(--red);
+        padding: 10px 20px;
+    }
+}

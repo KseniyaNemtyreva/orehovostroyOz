@@ -68,25 +68,27 @@ export function swiper(){
     },
   });
     
-    
+  new Swiper('.compare-swiper', {
+    modules: [ Navigation],
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.compare-section__swiper-button-next',
+        prevEl: '.compare-section__swiper-button-prev',
+    },
 
-      // if(window.innerWidth <  1024){
-      //   new Swiper('.reviews-page__slider', {
-      //     modules: [ Navigation,
-      //         Pagination],
-      //     slidesPerView: 1,
-      //     centeredSlides: true,
-      //     spaceBetween: 70,
-      //     loop: true,
-      //     pagination: {
-      //         el: ".reviews-page-swiper-pagination",
-      //         clickable: true,
-      //     },
-      //     // Navigation arrows
-      //     navigation: {
-      //         nextEl: '.reviews-swiper-button-next',
-      //         prevEl: '.reviews-swiper-button-prev',
-      //     },
-      // });
-      // }
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+      },
+      720: {
+        slidesPerView: 3,
+      },
+      1280: {
+        slidesPerView: 4,
+      },
+    }
+  });
 }

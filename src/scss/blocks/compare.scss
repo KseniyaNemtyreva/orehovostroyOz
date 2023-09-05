@@ -1,0 +1,130 @@
+.compare-section__title{
+
+    h1{
+        font-size: 35px;
+        font-weight: 700;
+        color: var(--dark);
+
+        span{
+            color: var(--red);
+        }
+
+        @media (min-width: 480px) {
+            font-size: 70px;
+        }
+    }
+}
+
+.compare-section__grid-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .compare-section__grid-buttons-delete{
+        a{
+            color: var(--red);
+        }
+    }
+
+    .compare-section__grid-buttons-swiper-btn{
+        display: flex;
+        .compare-section__swiper-button-prev{
+            padding: 10px;
+            border-radius: 50%;
+            background-color: var(--red);
+
+            margin-right: 15px;
+        }
+        .compare-section__swiper-button-next{
+            padding: 10px;
+            border-radius: 50%;
+
+            background-color: var(--red);
+        }
+    }
+}
+
+.compare-section__grid{
+    padding-bottom:150px ;
+    overflow: hidden;
+
+    margin-top: 20px;
+
+    .compare-section__item{
+
+
+        .compare-section__item-buttons{
+            display: flex;
+            margin-top: 20px;
+
+            a{
+
+                &:not(:last-child){
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .compare-section__item-title{
+            margin-top: 20px;
+            h2{
+                font-size: 30px;
+                font-weight: 700;
+                color: var(--dark);
+
+            }
+            span{
+                font-size: 30px;
+                font-weight: 700;
+                color: var(--red);
+            }
+        }
+
+        .compare-section__item-application{
+            margin-top: 20px;
+
+            button{
+                padding: 10px 20px;
+
+                font-size: 18px;
+                font-weight: 500;
+                color: #FFFFFF;
+                
+                background-color: var(--red);
+                border-left: 6px solid var(--dark);
+            }
+        }
+
+        .compare-section__item-price{
+            margin-top: 20px;
+            span{
+                font-size: 30px;
+                font-weight: 700;
+                color: var(--dark);
+            }
+        }
+
+        .compare-section__item-specifications{
+            margin-top: 20px;
+
+            ul{
+
+                li{
+                    border-bottom: 1px solid #DAD8D2;
+
+                    &:not(:first-child){
+                        margin-top: 10px;
+                    }
+
+                    h2{
+                        font-weight: 600;
+                        color: var(--dark);
+                    }
+                    p{
+                        color: var(--dark);
+                    }
+                }
+            }
+        }
+    }
+}
