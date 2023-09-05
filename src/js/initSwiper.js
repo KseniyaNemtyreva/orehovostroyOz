@@ -9,6 +9,29 @@ import "swiper/css/bundle";
 
 
 export function swiper(){
+  new Swiper('.information', {
+    modules: [Autoplay, 
+      Pagination, 
+      Navigation],
+    loop: true,
+    spaceBetween: 0,
+    // autoplay: true,
+    loop: false,
+    // autoplay: {
+    //   delay: 4500,
+    //   disableOnInteraction: false
+    // },
+    pagination: {
+      el: ".information-swiper-pagination",
+      clickable: true,
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.information-swiper-button-next',
+        prevEl: '.information-swiper-button-prev',
+    },
+  });
+
   new Swiper('.popular-projects__slider', {
     modules: [ Navigation],
     slidesPerView: 1,
@@ -70,23 +93,23 @@ export function swiper(){
     
     
 
-      // if(window.innerWidth <  1024){
-      //   new Swiper('.reviews-page__slider', {
-      //     modules: [ Navigation,
-      //         Pagination],
-      //     slidesPerView: 1,
-      //     centeredSlides: true,
-      //     spaceBetween: 70,
-      //     loop: true,
-      //     pagination: {
-      //         el: ".reviews-page-swiper-pagination",
-      //         clickable: true,
-      //     },
-      //     // Navigation arrows
-      //     navigation: {
-      //         nextEl: '.reviews-swiper-button-next',
-      //         prevEl: '.reviews-swiper-button-prev',
-      //     },
-      // });
-      // }
+  // if(window.innerWidth <  1024){
+  //   new Swiper('.reviews-page__slider', {
+  //     modules: [ Navigation,
+  //         Pagination],
+  //     slidesPerView: 1,
+  //     centeredSlides: true,
+  //     spaceBetween: 70,
+  //     loop: true,
+  //     pagination: {
+  //         el: ".reviews-page-swiper-pagination",
+  //         clickable: true,
+  //     },
+  //     // Navigation arrows
+  //     navigation: {
+  //         nextEl: '.reviews-swiper-button-next',
+  //         prevEl: '.reviews-swiper-button-prev',
+  //     },
+  // });
+  // }
 }
