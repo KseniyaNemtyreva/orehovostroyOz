@@ -207,7 +207,7 @@
     padding: 10px 15px 10px 20px;
 }
 .slider-element__price{
-    @apply text-[22px] font-bold
+    @apply text-[20px] font-bold
 }
 
 
@@ -278,7 +278,7 @@
     @apply mb-[17px] font-medium text-24px;
 }
 .slide-info__row-price{
-    @apply font-medium text-[22px];
+    @apply font-bold text-[22px];
 }
 .slide-info__row-btn{
     @apply text-white font-medium bg-red;

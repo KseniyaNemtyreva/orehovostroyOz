@@ -114,4 +114,43 @@ export function swiper(){
       },
     }
   });
+
+
+  const subswiper = new Swiper(".project-section__swiper", {
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  new Swiper(".project-section__swiper2", {
+    loop: true,
+    spaceBetween: 10,
+    thumbs: {
+      swiper: subswiper,
+    },
+  });
+  
+
+
+  new Swiper('.project-card__similar-projects-grid-mobile', {
+    modules: [ Navigation],
+    slidesPerView: 1,
+    spaceBetween: 10, 
+    centeredSlides: true,
+    loop: true,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.project-card-swiper-button-next',
+        prevEl: '.project-card-swiper-button-prev',
+    },
+
+    breakpoints: {
+      480: {
+        centeredSlides: false,
+        slidesPerView: 2,
+      },
+    }
+  });
+
 }
