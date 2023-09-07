@@ -36,31 +36,27 @@
     .permanent-stocks__grid{
         margin-top:40px ;
         padding-bottom: 150px;
+
+        a{
+            display: block;
+            &:not(:first-child){
+                margin-top: 40px;
+            }
+        }
     
         .permanent-stocks__item{
-            display: flex;
-            flex-direction: column;
-
+            display: grid;
             @media (min-width:480px) {
-                flex-direction: row;
-                align-items: center;
-            }
-    
-            &:not(:last-child){
-                margin-bottom: 40px;
+                grid-template-columns: 1fr 10fr;
             }
 
             .permanent-stocks__item-picture{
-                img{
-                    min-width: 121px;
-                    min-height: 121px;
-                }
+                width: 121px;
             }
         
             .permanent-stocks__item-text{
                 
                 @media (min-width:480px) {
-                    padding: 10px 0px;
                     margin-left: 10px;
                 }
 
@@ -75,7 +71,6 @@
                 }
                 p{
                     color: var(--dark);
-                    margin-top: 10px;
                 }
             }
         }

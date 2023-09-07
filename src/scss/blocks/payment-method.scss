@@ -15,23 +15,17 @@
     padding-bottom: 150px;
     
     .payment-method-section__item{
-        display: flex;
-        flex-direction: column;
-
+        display: grid;
+        
         @media (min-width:480px) {
-            flex-direction: row;
-            align-items: center;
+            grid-template-columns: 1fr 10fr;
+        }
+        .payment-method-section__item-picture{
+            width: 121px;
         }
 
         &:not(:last-child){
             margin-bottom: 40px;
-        }
-
-        .payment-method-section__item-picture{
-            img{
-                min-width: 121px;
-                min-height: 121px;
-            }
         }
 
         .payment-method-section__item-text{

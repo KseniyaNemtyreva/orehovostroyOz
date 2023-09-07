@@ -1,4 +1,4 @@
-import Swiper, { Autoplay, FreeMode, Navigation, Pagination } from 'swiper';
+import Swiper, { Autoplay, FreeMode, Navigation, Pagination, Thumbs } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -116,21 +116,24 @@ export function swiper(){
   });
 
 
-  const subswiper = new Swiper(".project-section__swiper", {
+  const subswiper = new Swiper(".project-cart-section__swiper", {
     loop: true,
     spaceBetween: 20,
     slidesPerView: 4,
     freeMode: true,
+    slideToClickedSlide: true,
     watchSlidesProgress: true,
   });
-  new Swiper(".project-section__swiper2", {
+   const swiper = new Swiper(".project-cart-section__swiper2", {
+    modules: [Thumbs],
     loop: true,
     spaceBetween: 10,
+    slideToClickedSlide: true,
     thumbs: {
       swiper: subswiper,
     },
   });
-  
+
 
 
   new Swiper('.project-card__similar-projects-grid-mobile', {
