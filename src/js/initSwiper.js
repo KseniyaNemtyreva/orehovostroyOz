@@ -153,4 +153,15 @@ export function swiper(){
     }
   });
 
+  new Swiper('.catalog__banners', {
+    modules: [ Pagination],
+    slidesPerView: 1,
+    spaceBetween: 40,
+    loop: true,
+    pagination: {
+        el: ".catalog__banners-pagination",
+        clickable: true,
+    },
+  });
+
 }

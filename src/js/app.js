@@ -20,6 +20,10 @@ const init = () => {
     burgerMenu();
 
 
+    if(window.location.pathname=='/'){
+        document.querySelector('header').classList.add('header-margin')
+    }
+
     document.querySelector('.footer__blocks-block.expand').addEventListener('click', (el) =>{
         document.querySelectorAll('.footer__blocks-block.close').forEach((elem) =>{
             elem.classList.replace('close', 'open')
