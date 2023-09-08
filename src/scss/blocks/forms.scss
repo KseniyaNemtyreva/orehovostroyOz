@@ -9,6 +9,9 @@
     background-color: #F5F5F2;
     cursor: default !important;
 
+    width: 1030px;
+    max-width: 100% !important;
+
     .callback-form__title{
 
         text-align: center;
@@ -156,12 +159,17 @@
 
 
 .callback-form__form-block{
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
+    // flex-direction: column;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
     margin-bottom: 30px;
-    flex-direction: column;
-
+    
     @media (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
         flex-direction: row;
     }
 
