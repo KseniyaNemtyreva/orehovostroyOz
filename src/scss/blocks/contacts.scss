@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    margin-bottom: 50px;
+    padding: 50px;
 }
 .contacts-left__block-img img{
     width: 100%;
@@ -87,12 +87,12 @@
         height: 380px;
     }
     .contacts{
-        margin-bottom: 80px;
+        padding-bottom: 80px;
     }
 }
 @media(min-width:720px){
     .contacts{
-        margin-bottom: 100px;
+        padding-bottom: 100px;
     }
 }
 @media(min-width:1024px){
@@ -109,7 +109,7 @@
     .contacts{
         grid-template-columns: 1fr 2fr;
         gap: 34px;
-        margin-bottom: 150px;
+        padding-bottom: 150px;
     }
     .contacts-left__block-title,
     .contacts-left__info-title{

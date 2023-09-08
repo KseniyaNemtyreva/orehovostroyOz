@@ -6,8 +6,31 @@
     @apply bg-white
 }
 
+.catalog-section__element-title h2{
+    @apply text-[22px] font-medium mb-[10px];
+}
 .catalog-section__element-title{
-    @apply text-[22px] font-medium mb-[17px];
+    @apply flex justify-between flex-wrap mb-[17px] items-baseline
+}
+.catalog-section__element-icon{
+    @apply flex
+}
+.catalog-section__element-fav{
+    @apply mr-[15px]
+}
+.catalog-section__element-fav path,
+.catalog-section__element-com path{
+    transition: all 0.3s ease-in-out;
+}
+.catalog-section__element-fav:hover path,
+.catalog-section__element-com:hover path{
+    fill: #BD3A48;
+}
+.catalog-section__element-fav.active path{
+    fill: #BD3A48;
+}
+.catalog-section__element-com.active path{
+    fill: #BD3A48;
 }
 
 .catalog-section__element-wrapper{
@@ -106,6 +129,25 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+}
+.catalog-section__element-picture{
+    @apply relative
+}
+.catalog-section__element-picture img{
+    @apply w-full
+}
+
+.catalog-section__element-mark{
+    @apply absolute w-[35px] h-[35px] bottom-0 flex items-center justify-center
+}
+
+.catalog-section__element-mark.garage,
+.catalog-section__element-mark.canopy{
+    @apply bg-red left-[19px]
+}
+.catalog-section__element-mark.boiler{
+    @apply left-[54px];
+    background: #F96600;
 }
 
 

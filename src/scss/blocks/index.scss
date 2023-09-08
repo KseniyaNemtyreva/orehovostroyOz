@@ -195,7 +195,12 @@
 .slider-element__wrapper{
     @apply p-5
 }
-
+.slider-element__picture{
+    @apply relative
+}
+.slider-element__picture img{
+    @apply w-full
+}
 .slider-element__info{
     @apply flex justify-between items-center mt-5
 }
