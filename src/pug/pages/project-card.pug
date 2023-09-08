@@ -8,9 +8,9 @@ block content
                 <h1>Дом из блока <span>37-Д-БЛ</span></h1>
             </div>
 
-            <div class="project-section__block">
-                <div class="project-section__content-picture">
-                    <div class="swiper project-section__swiper2">
+            <div class="project-cart-section__block">
+                <div class="project-cart-section__content-picture">
+                    <div class="swiper project-cart-section__swiper2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img src="../../assets/img/project.png" />
@@ -35,7 +35,7 @@ block content
                             </div>
                         </div>
                     </div>
-                    <div thumbsSlider="" class="swiper project-section__swiper">
+                    <div thumbsSlider="" class="swiper project-cart-section__swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img src="../../assets/img/project.png" />
@@ -61,16 +61,16 @@ block content
                         </div>
                     </div>
                 </div>
-                <div class="project-section__content-specifications">
-                    <div class="project-section__content-specifications__btn">
+                <div class="project-card-section__content-specifications">
+                    <div class="project-card-section__content-specifications__btn">
                         <button>Оставить заявку</button>
                     </div>
 
-                    <div class="project-section__content-specifications__price">
+                    <div class="project-card-section__content-specifications__price">
                         <span>5 186 000 ₽</span>
                     </div>
 
-                    <div class="project-section__content-specifications__table">
+                    <div class="project-card-section__content-specifications__table">
                         <div class="specifications__table-item">
                             <div>
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -332,7 +332,27 @@ block content
                 
                 <div class="project-card__client-corner-block">
                     <div class="project-card__client-corner-block-btn">
-                        <button>
+                        <div class="callback-form" id="application-form" style="display:none;max-width:560px;">
+                            <div class="callback-form__title">
+                                <h2>Оставить заявку на проект 37-Д-БЛ</h2>
+                            </div>
+                            <form>
+                                <div class="callback-form__form">
+                                    <input type="phone" class="callback-form__form-phone" id="application-form__form-phone" name="application-form__form-phone" required placeholder="Телефон для связи*">
+                                    <input type="text" class="callback-form__form-namee" id="application-form__form-name" name="application-form__form-name" placeholder="Ваше имя">
+                                    <input>
+                                    <div class="callback-form__form-approval">
+                                        <input type="checkbox" id="switch1" checked required /><label for="switch1">Toggle</label>
+                                        <span>Даю согласие на <a href="">обработку персональных данных</a></span>
+                                    </div>
+                                    <div class="callback-form__form-btn">
+                                        <button type="submit">Заказать звонок</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <button data-fancybox data-src="#application-form">
                             <div>
                                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M37.1785 16.8738L33.0868 13.7107C33.0679 13.6959 33.0491 13.6828 33.0294 13.6705V5.25C33.0294 4.86527 32.7168 4.55273 32.3321 4.55273H9.67262C9.28789 4.55273 8.97535 4.86527 8.97535 5.25V13.6672C8.96961 13.6713 8.96305 13.6754 8.9573 13.6795L4.82539 16.8738C4.74109 16.9391 4.67286 17.0227 4.62593 17.1184C4.57901 17.2141 4.55463 17.3193 4.55469 17.4259V36.75C4.55469 37.1347 4.86723 37.4473 5.25195 37.4473H36.752C37.1367 37.4473 37.4492 37.1347 37.4492 36.75V17.4251C37.4492 17.2093 37.3491 17.0059 37.1785 16.8738ZM35.4805 17.3234L33.0286 19.1658V15.4284L35.4805 17.3234ZM31.634 5.94727V20.2133L21.0003 28.2023L10.3691 20.2568V5.94727H31.634ZM8.97535 15.4284V19.215L6.48488 17.3537L8.97535 15.4284ZM5.94922 36.0527V18.6941L20.5844 29.633C20.7049 29.7232 20.8514 29.7718 21.002 29.7716C21.1496 29.7716 21.2964 29.7248 21.4211 29.6321L36.0547 18.6359V36.0527H5.94922Z" fill="black"/>
@@ -346,7 +366,30 @@ block content
                         </button>
                     </div>
                     <div class="project-card__client-corner-block-btn">
-                        <button>
+
+                        <div class="callback-form" id="question-form" style="display:none;max-width:560px;">
+                            <div class="callback-form__title">
+                                <h2>Задать вопрос о проекте 37-Д-БЛ</h2>
+                            </div>
+                            <form>
+                                <div class="callback-form__form">
+                                    <input type="text" class="callback-form__form-namee" id="question-form__form-name" name="question-form__form-name" placeholder="Ваше имя">
+                                    <input type="phone" class="callback-form__form-phone" id="question-form__form-phone" name="question-form__form-phone" required placeholder="Телефон для связи*">
+                                    <input type="email" class="callback-form__form-phone" id="question-form__form-email" name="question-form__form-phone" placeholder="E-mail">
+                                    <textarea rows="5" placeholder="Ваш вопрос"></textarea>
+                                    <input>
+                                    <div class="callback-form__form-approval">
+                                        <input type="checkbox" id="switch2" checked required /><label for="switch2">Toggle</label>
+                                        <span>Даю согласие на <a href="">обработку персональных данных</a></span>
+                                    </div>
+                                    <div class="callback-form__form-btn">
+                                        <button type="submit">Заказать звонок</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <button data-fancybox data-src="#question-form">
                             <div>
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M24.7826 2.6163C22.1755 0.906686 19.1252 -0.00277536 16.0076 6.36218e-06C7.17641 0.00849683 0.0170627 7.16088 9.17811e-06 15.992C-0.00335494 19.1007 0.918158 22.1401 2.64729 24.7234L0.0619097 30.9159C-0.0969417 31.3128 0.0960167 31.7633 0.492891 31.9222C0.67755 31.9961 0.883552 31.9961 1.06821 31.9222L7.26066 29.3368C14.6393 34.1754 24.5433 32.1162 29.3819 24.7375C34.2204 17.3589 32.1612 7.45485 24.7826 2.6163ZM16.0231 30.436H16.0077V30.4515C13.0663 30.4283 10.2007 29.5163 7.78707 27.8352C7.65981 27.7463 7.5088 27.6978 7.35362 27.6958C7.25652 27.6767 7.15661 27.6767 7.0595 27.6958L2.21384 29.7703L4.2419 24.9402C4.29275 24.8199 4.31232 24.6886 4.29878 24.5587C4.28524 24.4288 4.23904 24.3044 4.16447 24.1971C2.46006 21.8008 1.54549 18.9326 1.54818 15.992C1.53961 8.0063 8.00637 1.52568 15.9921 1.51711C23.9778 1.50855 30.4585 7.97531 30.4671 15.9611C30.4756 23.9468 24.0089 30.4274 16.0231 30.436Z" fill="#2A333E"/>
@@ -361,7 +404,28 @@ block content
                         </button>
                     </div>
                     <div class="project-card__client-corner-block-btn">
-                        <button>
+                        <div class="callback-form" id="callback-form" style="display:none;max-width:560px;">
+                            <div class="callback-form__title">
+                                <h2>Заказать обратный звонок</h2>
+                            </div>
+                            <form>
+                                <div class="callback-form__form">
+                                    <input type="phone" class="callback-form__form-phone" id="callback-form__form-phone" name="callback-form__form-phone" required placeholder="Телефон для связи*">
+                                    <input type="text" class="callback-form__form-namee" id="callback-form__form-name" name="callback-form__form-name" placeholder="Ваше имя">
+                                    <input>
+                                    <div class="callback-form__form-approval">
+                                        <input type="checkbox" id="switch3" checked required /><label for="switch3">Toggle</label>
+                                        <span>Даю согласие на <a href="">обработку персональных данных</a></span>
+                                    </div>
+                                    <div class="callback-form__form-btn">
+                                        <button type="submit">Заказать звонок</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        //- id="callback__open-btn"
+
+                        <button data-fancybox data-src="#callback-form">
                             <div>
                                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M21 5C12.1776 5 5 12.1776 5 21C5 29.8224 12.1776 37 21 37C29.8224 37 37 29.8224 37 21C37 12.1776 29.8224 5 21 5ZM21 35.5C13.0047 35.5 6.5 28.9953 6.5 21C6.5 13.0047 13.0047 6.5 21 6.5C28.9953 6.5 35.5 13.0047 35.5 21C35.5 28.9953 28.9953 35.5 21 35.5ZM29.3679 23.9103C29.3678 23.9103 29.3678 23.9103 29.3679 23.9103L26.4286 22.2133C25.9785 21.9535 25.4533 21.8846 24.9499 22.0195C24.4464 22.1544 24.026 22.4766 23.7662 22.9267C23.6154 23.1879 23.3514 23.5164 22.9497 23.5986C22.5833 23.6735 22.2599 23.6008 21.9609 23.3764C20.8562 22.5474 19.4528 21.1439 18.6236 20.0392C18.3993 19.7402 18.3266 19.4167 18.4015 19.0504C18.4836 18.6486 18.8122 18.3846 19.0734 18.2339C20.0041 17.6964 20.3241 16.5021 19.7867 15.5714L18.0898 12.6321C17.6037 11.7903 16.5942 11.4373 15.6896 11.7924L15.6544 11.8063C14.2498 12.3577 13.2227 12.7809 12.7979 13.2056C12.0264 13.9772 11.2449 15.4131 11.9037 17.8717C13.1833 22.6473 19.3527 28.8167 24.1283 30.0964C24.7767 30.2701 25.3539 30.3437 25.8667 30.3437C27.2981 30.3437 28.2264 29.7703 28.7945 29.2021C29.2192 28.7774 29.6423 27.7505 30.1936 26.3463L30.2077 26.3105C30.5627 25.4058 30.2096 24.3964 29.3679 23.9103ZM28.8113 25.7623L28.7972 25.7981C28.5312 26.4756 27.9778 27.8853 27.7336 28.1414C27.0177 28.8574 25.9352 29.0276 24.5163 28.6475C20.2374 27.5009 14.4989 21.7624 13.3524 17.4835C12.9722 16.0647 13.1424 14.9822 13.8577 14.267C14.1146 14.0221 15.5248 13.4686 16.2024 13.2026L16.2376 13.1887C16.2916 13.1673 16.349 13.1562 16.4071 13.1561C16.562 13.1561 16.7069 13.2374 16.7905 13.3821L18.4875 16.3214C18.6112 16.5359 18.5376 16.811 18.3232 16.9347C17.5772 17.3654 17.0831 18.0101 16.9318 18.7499C16.7705 19.5385 16.9406 20.2956 17.4237 20.9395C18.3418 22.1628 19.8373 23.6582 21.0604 24.5761C21.7042 25.0592 22.4614 25.2294 23.2501 25.0681C23.9899 24.9168 24.6345 24.4226 25.0652 23.6766C25.0946 23.6256 25.1339 23.5809 25.1808 23.5452C25.2276 23.5094 25.2811 23.4833 25.3381 23.4684C25.3949 23.4528 25.4543 23.4487 25.5127 23.4563C25.5712 23.4638 25.6275 23.4829 25.6786 23.5123L28.6178 25.2093C28.8149 25.3232 28.8944 25.5506 28.8113 25.7623Z" fill="black"/>
@@ -374,7 +438,41 @@ block content
                         </button>
                     </div>
                     <div class="project-card__client-corner-block-btn">
-                        <button>
+                        <div class="callback-form" id="calculation-form" style="display:none;max-width:1030px;">
+                            <div class="callback-form__title">
+                                <h2>Получите рассчет вашего проекта</h2>
+                            </div>
+                            <form>
+                                <div class="callback-form__form">
+                                    <div class="callback-form__form-block">
+                                        <div class="callback-form__form-block-inputs">
+                                            <input type="text" class="callback-form__form-name" id="calculation-form__form-name" name="calculation-form__form-name" placeholder="Ваше имя">
+                                            <input type="phone" class="callback-form__form-phone" id="calculation-form__form-phone" name="calculation-form__form-phone" required placeholder="Телефон для связи*">
+                                            <input type="email" class="callback-form__form-email" id="calculation-form__form-email" name="calculation-form__form-email" required placeholder="E-mail*">
+                                        </div>
+                                        <div class="callback-form__form-block-textarea">
+                                            <textarea rows="5" placeholder="Комментарий"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="callback-form__form-file-block">
+                                        <label for="calculation-form__form-file">Добавить ваше фото</label>
+                                        <input type="file" style="visibility:hidden;display:none;" class="callback-form__form-file" id="calculation-form__form-file" name="calculation-form__form-file">
+                                    </div>
+                                    
+                                    <input>
+                                    <div class="callback-form__form-approval">
+                                        <input type="checkbox" id="switch4" checked /><label for="switch4">Toggle</label>
+                                        <span>Даю согласие на <a href="">обработку персональных данных</a></span>
+                                    </div>
+                                    <div class="callback-form__form-btn">
+                                        <button type="submit">Заказать звонок</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <button data-fancybox data-src="#calculation-form">
                             <div>
                                 <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M23.3333 32H3.33333C2.4496 31.9989 1.60237 31.6474 0.97748 31.0225C0.352588 30.3976 0.00105857 29.5504 0 28.6667V3.33333C0 1.496 1.496 0 3.33333 0H23.3333C25.1707 0 26.6667 1.496 26.6667 3.33333V28.6667C26.6667 30.504 25.1707 32 23.3333 32ZM3.33333 1.33333C2.23067 1.33333 1.33333 2.23067 1.33333 3.33333V28.6667C1.33333 29.7693 2.23067 30.6667 3.33333 30.6667H23.3333C24.436 30.6667 25.3333 29.7693 25.3333 28.6667V3.33333C25.3333 2.23067 24.436 1.33333 23.3333 1.33333H3.33333Z" fill="#2A333E"/>

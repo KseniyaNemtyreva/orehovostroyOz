@@ -2,7 +2,8 @@ import '../scss/app.scss';
 
 import { swiper } from './initSwiper';
 import { burgerMenu } from './initBurgerMenu';
-// import { fancybox } from './fancybox';
+import { fancybox } from './fancybox';
+import { mask } from './mask';
 // import { initLists } from './initLists';
 // import { initIMask } from './initIMask';
 // import { initVideo } from './initVideo';
@@ -18,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
 const init = () => {
     swiper();
     burgerMenu();
+    fancybox();
+    mask();
+
 
 
     if(window.location.pathname=='/'){
