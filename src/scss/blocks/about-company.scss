@@ -32,10 +32,11 @@
     }
     .text-section__medium-text__img{
         margin-top: 20px;
-
+        
         @media (min-width: 1024px) {
             max-width: 50%;
             margin-top: 0px;
+            margin-left: 20px;
         }
     }
 }
