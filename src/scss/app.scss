@@ -80,6 +80,31 @@ body{
 }
 .section-wrapper{
     background: #F5F5F2;
+    padding-top: 20px;
+}
+.section__title{
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 120%;
+    
+    span{
+        @apply text-red
+    }
+}
+@media (min-width:480px) {
+    .section__title{
+        font-size: 45px;
+    }
+}
+@media (min-width:720px) {
+    .section__title{
+        font-size: 50px;
+    }
+}
+@media (min-width:1024px) {
+    .section__title{
+        font-size: 70px;
+    }
 }
 .modal-menu__wrapper {
     @apply block fixed left-0 top-0 w-full h-full overflow-auto; 

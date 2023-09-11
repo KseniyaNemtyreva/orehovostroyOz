@@ -750,8 +750,14 @@ block content
         <div class="container">
             <h2 class="videos__title title">Видео наших <span>проектов</span></h2>
             <div class="videos__wrapper">
-                <div class="video__container">
-                    <video src="https://www.orehovostroy.ru/wp-content/uploads/2022/05/vintovie-svai.mp4" controls="controls" poster="../../assets/img/video_bg.png">
+                <div class="video__container" onclick="this.querySelector('source').setAttribute('src', this.querySelector('source').getAttribute('data-src')); this.removeAttribute('onclick');">
+                    <video controls="controls" poster="../../assets/img/video_bg.png">
+                        <source data-src="https://www.orehovostroy.ru/wp-content/uploads/2022/05/vintovie-svai.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div onclick="this.querySelector('source').setAttribute('src', this.querySelector('source').getAttribute('data-src')); this.removeAttribute('onclick');" class="video-block">
+                    <video id="my-player" class="video-js" controls data-setup='{}'>
+                        <source data-src="https://www.orehovostroy.ru/wp-content/uploads/2022/05/vintovie-svai.mp4" type="video/mp4"></source> 
                     </video>
                 </div>
                 <div class="video__container">

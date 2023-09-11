@@ -1,0 +1,23 @@
+export function faq(){ 
+    //FAQ
+    document.querySelectorAll('.questions__question').forEach((elem) =>{
+        elem.addEventListener('click', async() =>{
+            let question = elem.querySelector('.questions__question-content')
+            let sign = elem.querySelector('.questions__question-sign')
+            if(question.classList.contains('inactive')){
+                elem.parentElement.querySelectorAll('.questions__question-content.active').forEach((button)=>{
+                    button.classList.replace("active", "inactive"); 
+                    button.parentElement.querySelector('.questions__question-sign').innerHTML = "+"                                   
+                })
+                
+                question.classList.replace('inactive', 'active')
+                sign.innerHTML = "-"
+            }
+            else{                
+                question.classList.replace('active', 'inactive')
+                sign.innerHTML = "+"
+            }
+        
+        })
+    })
+}

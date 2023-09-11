@@ -141,7 +141,7 @@ export function swiper(){
     slidesPerView: 1,
     spaceBetween: 10, 
     centeredSlides: true,
-    loop: true,
+    loop: false,
     // Navigation arrows
     navigation: {
         nextEl: '.project-card-swiper-button-next',
@@ -149,9 +149,13 @@ export function swiper(){
     },
 
     breakpoints: {
-      480: {
+      720: {
         centeredSlides: false,
         slidesPerView: 2,
+      },
+      1024: {
+        centeredSlides: false,
+        slidesPerView: 3,
       },
     }
   });

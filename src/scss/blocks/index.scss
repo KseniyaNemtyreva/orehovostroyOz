@@ -453,7 +453,7 @@
     transition: gap .3s;
 }
 .questions__question-title{
-    @apply flex justify-center items-center p-[10px];
+    @apply flex justify-center items-center p-[10px] cursor-pointer;
 }
 .questions__question-title h3{
     @apply text-dark_dark_blue font-bold text-16px

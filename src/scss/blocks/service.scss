@@ -3,7 +3,7 @@
     grid-template-columns: 1fr;
     gap: 40px;
     
-    @media (min-width: 720px) {
+    @media (min-width: 1024px) {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
@@ -12,7 +12,11 @@
     .service-section__grid-item{
 
         .service-section__grid-item__picture{
-
+            @apply max-h-[237px] overflow-hidden;
+            
+            img {
+                @apply w-full
+            }
 
         }
         .service-section__grid-item__info{
@@ -28,7 +32,7 @@
             .service-section__grid-item__info-btn{
                 margin-top: 30px;
 
-                button{
+                a{
                     border: 1px solid var(--red);
                     border-left: 6px solid var(--red);
                     color: var(--red);
