@@ -29,6 +29,14 @@ header span{
 .header__comp{
     @apply min-w-[20px]
 }
+.header__fav path,
+.header__comp path{
+    transition: all 0.3s linear;
+}
+.header__fav:hover path,
+.header__comp:hover path{
+    fill: var(--red)
+}
 
 .header__catalog-block{
     @apply bg-white;
@@ -70,6 +78,17 @@ header span{
 }
 .contact__number-block{
     @apply flex items-center flex-col;
+    transition: padding 0.3s linear;
+}
+.contact__number-block a:not(:first-child){
+    @apply invisible opacity-0 absolute;
+    transition: all 0.3s linear;
+}
+.contact__number-block a:hover{
+    text-decoration: underline;
+}
+.contact__number-block.active a:not(:first-child){
+    @apply visible opacity-[1] relative
 }
 .contact__number button{
     @apply ml-[10px]
@@ -78,10 +97,12 @@ header span{
 .contact__callback{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 1em;
     line-height: 20px;
-    text-wrap:nowrap;
-    color: #BD3A48;
+    text-wrap: nowrap;
+    color: var(--red);
+}
+.contact__callback button:hover{
+    text-decoration: underline;
 }
 
 .header__menu ul{
@@ -164,6 +185,15 @@ header span{
         font-size: 1em;
         margin-left: 18px;
     }
+    .contact__number-block.active{
+        background: white;
+        padding: 10px;
+        margin-top: -30px;
+        margin-bottom: -40px;
+        position: relative;
+        z-index: 1;
+    }
+   
 }
 @media (min-width:1280px ) {
     .contact__callback{

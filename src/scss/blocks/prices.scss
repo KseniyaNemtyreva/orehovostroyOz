@@ -26,36 +26,21 @@
         overflow-wrap: anywhere;
 
         tbody{
-
-            .prices-section__grid-header{
-                background-color: var(--red) !important;
-                color: #FFFFFF !important;
-
-                font-size: 18px;
-                font-weight: 700;
-            }
-
-            .prices-section__grid-title{
-                td{
-                    font-size: 18px;
-                    font-weight: 700;
-
-
-                    &:first-child{
-                        overflow-wrap: break-word;
-                    }
-                }
-            }
+            
             tr{
 
-                border: 1px solid #DAD8D2;
+                border-bottom: 1px solid #DAD8D2;
                 background-color: inherit;
                 
                 td{
                     padding: 10px;
 
                     color: var(--dark);
-                    font-size: 18px;
+                    font-size: 16px;
+
+                    @media(min-width:480px) {
+                        font-size: 18px;
+                    }
 
                     &:first-child,
                     &:last-child{
@@ -64,6 +49,25 @@
                 }
             }
 
+        }
+    }
+}
+.prices-section__grid-header{
+    background-color: var(--red) !important;
+    color: #FFFFFF !important;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.prices-section__grid-title{
+    td{
+        font-size: 18px;
+        font-weight: 700;
+
+
+        &:first-child{
+            overflow-wrap: break-word;
         }
     }
 }

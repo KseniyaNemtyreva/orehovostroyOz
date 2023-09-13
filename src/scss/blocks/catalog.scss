@@ -13,10 +13,10 @@
     }
 }
 .catalog__img img{
-    @apply min-h-[655px] object-cover object-left w-full;
+    @apply min-h-[500px] object-cover object-[60%] w-full;
 }
 .catalog__content {
-    @apply w-full absolute bottom-[30%]
+    @apply w-full absolute bottom-[50%]
 }
 .detail-btn{
     @apply flex justify-center items-center bg-red rounded-[1px] mt-[60px];
@@ -133,6 +133,9 @@
     }
     .catalog-container{
         padding: 0 30px;
+    }
+    .catalog__img img{
+        @apply min-h-[655px];
     }
 }
 @media (min-width:1024px) {

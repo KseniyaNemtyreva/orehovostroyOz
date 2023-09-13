@@ -139,6 +139,9 @@ body{
 .modal-menu__section{
     @apply py-[10px]
 }
+.modal-menu__section a:hover{
+    text-decoration: underline;
+}
 .modal-menu__list li:not(:first-child){
     @apply mt-[20px]
 }
@@ -159,4 +162,15 @@ body{
 }
 .modal-menu__item-order{
     @apply text-red text-16px font-medium;
+}
+.modal-menu__item-orderm button:hover{
+    text-decoration: underline;
+}
+.modal-menu__btn path,
+.modal-menu__btn path{
+    transition: all 0.3s linear;
+}
+.modal-menu__btn:hover path,
+.modal-menu__btn:hover path{
+    fill: var(--red)
 }

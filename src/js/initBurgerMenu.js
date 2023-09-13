@@ -37,4 +37,44 @@ export function burgerMenu(){
         }
     }
     });
+
+
+    const filterButton = document.querySelector('#filter-btn');
+    const filterWrapper = document.querySelector('#filter-wrapper');
+    const filterList = document.querySelector('#filter-list');
+    const filterClose = document.querySelector('#filter-close');
+
+    document.addEventListener('click', (e) => {
+    const onButton = e.composedPath().includes(filterButton);
+    const onBurgerList = e.composedPath().includes(filterList);
+    const onBurgerClose = e.composedPath().includes(filterClose);
+    let open = false;
+
+    if (filterWrapper) {
+        if (onButton) {
+            filterWrapper.classList.add('open');
+            filterWrapper.classList.remove('close');
+            filterButton.classList.add('hide');
+            filterButton.classList.remove('show');
+            open = true;
+        } else {
+            if (onBurgerList) {
+                if (onBurgerClose) {
+                filterWrapper.classList.remove('open');
+                filterWrapper.classList.add('close');
+                filterButton.classList.remove('hide');
+                filterButton.classList.add('show');
+                open = false;
+                }
+                return;
+            } else {
+                filterWrapper.classList.remove('open');
+                filterWrapper.classList.add('close');
+                filterButton.classList.remove('hide');
+                filterButton.classList.add('show');
+                open = false;
+            }
+        }
+    }
+    });
 }

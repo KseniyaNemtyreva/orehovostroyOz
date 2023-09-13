@@ -11,7 +11,9 @@
     display: flex;
     flex-direction: column;
 }
-
+.footer__blocks-block__menu a:hover{
+    text-decoration: underline;
+}
 .footer__blocks-block__menu a:first-child{
     color:#BD3A48;
 
@@ -51,13 +53,21 @@
     font-weight: 600;
     font-size: 20px;
 }
+.footer__blocks-block__numbers span:hover{
+    text-decoration: underline;
+}
 
 .footer__blocks-block__mail{
     color: #BD3A48;
     font-weight: 600;
     font-size: 20px;
 }
-
+.footer__blocks-block__mail span:hover{
+    text-decoration: underline;
+}
+.footer__blocks-block__subtitle{
+    padding: 23px 0;
+}
 .footer__contact{
     @apply flex justify-between flex-col
 }
@@ -101,7 +111,7 @@
     }
     .footer__blocks-block.expand,
     .footer__blocks-block.collapse{
-        @apply hidden
+        display: none !important;
     }
 }
 @media (min-width:1024px) {
