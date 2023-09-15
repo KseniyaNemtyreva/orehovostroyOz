@@ -136,36 +136,31 @@
 
 
 .project-card__section-layout{
-
-
     h2{
         font-size: 36px;
         font-weight: 700;
         color: var(--dark);
     }
+}
+.project-card__section-layout-images{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    flex-direction: column;
 
-    .project-card__section-layout-images{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 25px;
-        flex-direction: column;
+    @media (min-width: 1024px) {
+        flex-direction: row;
+    }
+}
+.project-card__section-layout-image{
+    margin-top: 20px;
+    cursor: pointer;
 
-        @media (min-width: 1024px) {
-            flex-direction: row;
-        }
+    @media (min-width: 1024px) {
+        margin-top: 0px;
 
-        .project-card__section-layout-image{
-
-
-            margin-top: 20px;
-
-            @media (min-width: 1024px) {
-                margin-top: 0px;
-
-                &:last-child{
-                    margin-left: 100px;
-                }
-            }
+        &:last-child{
+            margin-left: 100px;
         }
     }
 }
@@ -224,13 +219,12 @@
             color: var(--red);
         }
     }
+}
+.project-card__built-project-item{
+    margin-top: 35px;
+    background-color: #FFFFFF;
 
-    .project-card__built-project-item{
-        margin-top: 35px;
-        background-color: #FFFFFF;
-
-        max-width: 779px;
-    }
+    max-width: 779px;
 }
 
 .project-card__banner{
@@ -240,7 +234,7 @@
 
 .project-card__client-corner{
     position: relative;
-    margin-top: 10px;
+    margin-top: 60px;
 
     h2{
         position: relative;
@@ -254,17 +248,17 @@
             color: var(--red);
         }
     }
+}
 
-    .project-card__client-corner__bg{
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: 0;
+.project-card__client-corner__bg{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
 
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .project-card__client-corner-block{
@@ -343,13 +337,10 @@
         display: grid;
     }
 }
-.project-card__similar-projects-grid-mobile{
-    margin-top: 20px;
-}
 
 .project-card__slider-buttons{
     display: flex;
-    padding-bottom: 10px;
+    padding-bottom: 14px;
 }
 .project-card-swiper-button-prev{
     background-color: var(--red);

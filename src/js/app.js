@@ -26,7 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    
+    document.querySelectorAll('.block__select').forEach(element => {
+        element.addEventListener('click', () => {
+            console.log(element.classList.contains("active"))
+            if(element.classList.contains("active")){
+                element.classList.remove("active")
+            }
+            else{
+                element.classList.add("active")
+            }            
+        })
+    });
+  
 
     document.querySelectorAll('.catalog-filter__choice').forEach(element => {
         element.addEventListener('click', () => {

@@ -1,8 +1,11 @@
 header.header-margin{
     padding-top: 17px;
-    margin-bottom: -200px;
+    margin-bottom: -210px;
     position: relative;
     z-index: 2;
+}
+header{
+    padding-bottom: 10px;
 }
 header span{
     font-family: 'Montserrat', sans-serif;
@@ -48,7 +51,7 @@ header span{
     @apply bg-red;
     display: flex;
     align-items: center;
-    padding: 12px 26px 14px 26px;    
+    padding: 12px 26px 14px 20px;    
     border-left: 6px solid #2A333E;
     border-radius: 1px;
 }
@@ -60,10 +63,11 @@ header span{
 }
 
 .catalog-block__search{
-    margin: 0 15px;
+   
 }
 .catalog-block__search button{
-     @apply min-w-[24px]
+    padding: 12px 15px 17px;
+    cursor: pointer;
 }
 .header__contact{
     @apply hidden
@@ -77,21 +81,19 @@ header span{
     text-wrap: nowrap;
 }
 .contact__number-block{
-    @apply flex items-center flex-col;
-    transition: padding 0.3s linear;
+    @apply flex items-center flex-col p-[10px];
+}
+.contact__number-block a{
+    transition: all 0.3s linear;
 }
 .contact__number-block a:not(:first-child){
     @apply invisible opacity-0 absolute;
-    transition: all 0.3s linear;
 }
 .contact__number-block a:hover{
     text-decoration: underline;
 }
 .contact__number-block.active a:not(:first-child){
     @apply visible opacity-[1] relative
-}
-.contact__number button{
-    @apply ml-[10px]
 }
 
 .contact__callback{
@@ -110,16 +112,16 @@ header span{
     padding: 10px 0px;
 }
 
-.header__menu ul li{
+.header__menu ul li a{
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     padding: 5px;
     transition: all 0.3s ease-in-out;
 }
-.header__menu ul li:hover{
+.header__menu ul li a:hover{
     @apply bg-white
 }
-.header__menu ul li:not(:first-child){
+.header__menu ul li a:not(:first-child){
     margin-left: 20px;
 }
 
@@ -141,7 +143,7 @@ header span{
 
 @media (min-width:480px ) {
     header.header-margin{
-        margin-bottom: -93px;
+        margin-bottom: -103px;
     }
    .header__logo{
     @apply max-w-[135px] 
@@ -164,7 +166,7 @@ header span{
 }
 @media (min-width:1024px) {
     header.header-margin{
-        margin-bottom: -160px;
+        margin-bottom: -170px;
     }
     .header__catalog-block{
         margin-inline-end: inherit;
@@ -187,7 +189,6 @@ header span{
     }
     .contact__number-block.active{
         background: white;
-        padding: 10px;
         margin-top: -30px;
         margin-bottom: -40px;
         position: relative;

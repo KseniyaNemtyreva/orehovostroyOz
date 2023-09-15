@@ -77,4 +77,35 @@ export function burgerMenu(){
         }
     }
     });
+
+
+    const searchButton = document.querySelector('#search-main__btn');
+    const searchWrapper = document.querySelector('#search-main__wrap');
+    const searchList = document.querySelector('#search-main__block');
+
+    document.addEventListener('click', (e) => {
+    const onButton = e.composedPath().includes(searchButton);
+    const onBurgerList = e.composedPath().includes(searchList);
+    let open = false;
+
+    if (searchWrapper) {
+        if (onButton) {
+            searchWrapper.classList.add('open');
+            searchWrapper.classList.remove('close');
+            searchButton.classList.add('hide');
+            searchButton.classList.remove('show');
+            open = true;
+        } else {
+            if (onBurgerList) {
+                return;
+            } else {
+                searchWrapper.classList.remove('open');
+                searchWrapper.classList.add('close');
+                searchButton.classList.remove('hide');
+                searchButton.classList.add('show');
+                open = false;
+            }
+        }
+    }
+    });
 }

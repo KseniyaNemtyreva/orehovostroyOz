@@ -13,40 +13,38 @@
 .payment-method-section__grid{
     margin-top: 40px;
     padding-bottom: 150px;
+}
+.payment-method-section__item{
+    display: grid;
     
-    .payment-method-section__item{
-        display: grid;
-        
-        @media (min-width:480px) {
-            grid-template-columns: 1fr 10fr;
-        }
-        .payment-method-section__item-picture{
-            width: 121px;
-        }
+    @media (min-width:480px) {
+        grid-template-columns: 1fr 10fr;
+    }
+   
+    &:not(:last-child){
+        margin-bottom: 40px;
+    }
+}
+.payment-method-section__item-picture{
+    width: 121px;
+}
+.payment-method-section__item-text{
+    @media (min-width: 480px) {
+        padding: 10px 0px;
+        margin-left: 10px;
+    }
 
-        &:not(:last-child){
-            margin-bottom: 40px;
+    h2{
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--dark);
+
+        @media (min-width:720px) {
+            font-size: 24px;
         }
-
-        .payment-method-section__item-text{
-            @media (min-width: 480px) {
-                padding: 10px 0px;
-                margin-left: 10px;
-            }
-
-            h2{
-                font-size: 18px;
-                font-weight: 600;
-                color: var(--dark);
-
-                @media (min-width:720px) {
-                    font-size: 24px;
-                }
-            }
-            p{
-                color: var(--dark);
-                margin-top: 10px;
-            }
-        }
+    }
+    p{
+        color: var(--dark);
+        margin-top: 10px;
     }
 }

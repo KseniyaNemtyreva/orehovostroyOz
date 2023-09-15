@@ -34,6 +34,7 @@
     justify-content: space-between;
     width: -webkit-fill-available;
     max-width: 200px;
+    transition: top 1.3s,font-size 0.5s 0.25s, margin 0.5s 0.25s, gap 0.3s 0.25s, opacity 0.5s, padding 0.5s 0.25s, max-height 0.5s ease-in-out;
 }
 
 .footer__blocks-block__numbers{
@@ -95,7 +96,11 @@
     @apply text-white flex flex-col items-center
 }
 .footer__blocks-block.close{
-    @apply hidden
+    height: 0;
+    font-size: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
 }
 
 @media (min-width:480px ) {
@@ -107,7 +112,11 @@
     }
     
     .footer__blocks-block.close{
-        @apply block
+        @apply block;
+        height: inherit;
+        font-size: inherit;
+        opacity: inherit;
+        position: inherit;
     }
     .footer__blocks-block.expand,
     .footer__blocks-block.collapse{

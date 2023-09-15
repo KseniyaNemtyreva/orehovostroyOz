@@ -122,6 +122,7 @@
 }
 .calculate-project__house{
     @apply absolute bottom-0 z-[1] object-cover w-full h-full;
+    object-position: 0%;
 }
 .calculate-project__container{
     @apply grid gap-[30px] grid-cols-1
@@ -141,23 +142,22 @@
 }
 
 .calculate-project__type-build{
-    @apply max-w-[650px] p-[50px] z-[2] bg-white;
+    @apply max-w-[650px] z-[2] bg-white;
+    padding: 50px 14px;
 }
 
 .calculate-project__type-build h2{
-    @apply font-medium text-30px leading-[36px]
+    @apply font-medium text-30px leading-[36px] mb-[30px]
 }
 
 .type-build__blocks{
     display: grid;
-    grid: auto-flow / 1fr 1fr;
+    grid: 1fr;
     gap: 20px;
-
-    @media (max-width:320px) {
-        grid: unset;
-    }
 }
-
+.block__picture img {
+    width: 100%;
+}
 .type-build__block{
     text-align: center;
     position: relative;
@@ -186,6 +186,11 @@
     right: 0;
 
     margin: 0 auto;
+    transition: all .3s ease-in-out;
+}
+.block__select.active,
+.block__select:hover{
+    @apply bg-red
 }
 
 .type-build__buttons{
@@ -202,17 +207,21 @@
     border: 1px solid #BD3A48;
     border-left: 6px solid #BD3A48;
 
-    padding: 10px 15px 12px 19px;
+    padding: 10px 15px 12px 13px;
 }
 .type-build__next{
     @apply text-white text-16px font-medium bg-red;
     border-left: 6px solid #2A333E;
-    padding: 10px 15px 12px 19px;
+    padding: 10px 15px 12px 13px;
 
 }
 
 
 //popular-projects
+.popular-projects__slider{
+    display: flex;
+    justify-content: center;
+}
 .popular-projects__header{
     margin-top: 80px; 
 }
@@ -228,7 +237,7 @@
     margin-left: 10px;
 }
 .slider-element{
-    @apply bg-white max-w-[290px]
+    @apply bg-white
 }
 .popular-projects__slider{
     margin-top: 60px;
@@ -263,7 +272,7 @@
     background-color: inherit;
     border: 1px solid #BD3A48;
     border-left: 6px solid #BD3A48;
-    padding: 10px 15px 10px 20px;
+    padding: 10px 15px 10px 14px;
 }
 .slider-element__price{
     @apply text-[20px] font-bold
@@ -380,7 +389,7 @@
 .offer__content-btn{
     @apply w-full bg-red text-white font-medium;
     border-left: 6px solid #2A333E;
-    padding: 10px 20px 12px 20px;
+    padding: 10px 20px 12px 14px;
 }
 .offer__content-blocks{
     @apply relative grid
@@ -491,7 +500,7 @@
 
 //questions
 .questions{
-    @apply relative z-0 pb-[100px];
+    @apply relative z-0 min-h-[1700px];
     background: linear-gradient(#EFEEEA,#DBF2FF);
 }
 
@@ -505,7 +514,8 @@
     @apply bg-gray relative z-[2] max-w-[850px] mt-[20px]
 }
 .questions__question-content.inactive{
-    @apply gap-0 text-[0px] m-0 opacity-0 p-0
+    @apply gap-0 text-[0px] m-0 opacity-0 p-0;
+    transition: font-size .5s .25s, margin .5s .25s, gap .3s .25s, opacity .5s, padding .5s .25s, max-height 0.5s ease-in-out;
 }
 .questions__question-content.active{
     transition: gap .3s;
@@ -518,12 +528,34 @@
 }
 .questions__question-content{
     @apply grid m-0 grid-cols-1 gap-[5px] p-[10px];
-    transition: font-size .5s .25s, margin .5s .25s, gap .3s .25s, opacity .5s, padding .5s .25s, max-height 0.5s ease-in-out;
+  
 } 
 .questions__question-sign{
     @apply text-[23px]
 }
-
+.main-search input{
+    @apply w-[90%] bg-white p-[30px] absolute top-[100px] z-[3] rounded-[20px] left-0 right-0 invisible opacity-0;
+    margin: 0 auto;
+    box-shadow: 10px 12px 5px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s linear;
+}
+.main-search__wrapper.open input{
+    @apply visible opacity-[1]
+}
+.main-search__wrapper{
+    @apply block fixed left-0 top-0 w-full h-full overflow-auto; 
+    transition: all 0.3s ease-in-out;
+}
+.main-search__wrapper.close{
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+.main-search__wrapper.open{
+    @apply z-[3];
+    opacity: 1;
+    visibility: visible;
+}
 
 
 .title{
@@ -606,7 +638,12 @@
     .reviews-swiper-buttons{
         @apply w-[482px];
     }
-    
+    .type-build__blocks{
+        grid: auto-flow / 1fr 1fr;
+    }
+    .questions{
+        @apply min-h-[1163px];
+    }
 
     .title{
         font-size: 45px;
@@ -671,6 +708,13 @@
     .reviews-swiper-buttons{
         @apply w-[710px] bottom-[110px];
     }
+    .calculate-project__type-build{
+        @apply p-[50px];
+    }
+    .questions{
+        @apply min-h-[956px];
+    }
+
 
     .title{
         font-size: 50px;
@@ -733,6 +777,9 @@
     }
     .implemented-projects-swiper-buttons{
         @apply w-[850px] bottom-[117px];
+    }
+    .calculate-project__house{
+        object-position: inherit;
     }
 }
 @media (min-width:1440px) {

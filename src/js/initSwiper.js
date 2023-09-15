@@ -136,7 +136,7 @@ export function swiper(){
 
 
 
-  new Swiper('.project-card__similar-projects-grid-mobile', {
+  new Swiper('.project-card__similar-projects-grid', {
     modules: [ Navigation],
     slidesPerView: 1,
     spaceBetween: 10, 

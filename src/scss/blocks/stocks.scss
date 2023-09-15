@@ -16,63 +16,58 @@
 }
 
 
-.stocks-section__season-stocks{
-    .season-stocks__grid{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 55px;
-    
-        margin-top: 40px;
-    
-        @media (min-width: 1024px) {
-            grid-template-columns: 1fr 1fr;
-        }
+.season-stocks__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 55px;
+
+    margin-top: 40px;
+
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 .permanent-stocks{
     margin-top: 40px;
-    
-    .permanent-stocks__grid{
-        margin-top:40px ;
-        padding-bottom: 150px;
+}
+.permanent-stocks__grid{
+    margin-top:40px ;
+    padding-bottom: 150px;
 
-        a{
-            display: block;
-            &:not(:first-child){
-                margin-top: 40px;
-            }
+    a{
+        display: block;
+        &:not(:first-child){
+            margin-top: 40px;
         }
-    
-        .permanent-stocks__item{
-            display: grid;
-            @media (min-width:480px) {
-                grid-template-columns: 1fr 10fr;
-            }
+    }
+}
+.permanent-stocks__item{
+    display: grid;
+    @media (min-width:480px) {
+        grid-template-columns: 1fr 10fr;
+    }
+}
+.permanent-stocks__item-picture{
+    width: 121px;
+}
 
-            .permanent-stocks__item-picture{
-                width: 121px;
-            }
+.permanent-stocks__item-text{
+    
+    @media (min-width:480px) {
+        margin-left: 10px;
+    }
+
+    h2{
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--dark);
         
-            .permanent-stocks__item-text{
-                
-                @media (min-width:480px) {
-                    margin-left: 10px;
-                }
-
-                h2{
-                    font-size: 18px;
-                    font-weight: 600;
-                    color: var(--dark);
-                    
-                    @media (min-width:720px) {
-                        font-size: 24px;
-                    }
-                }
-                p{
-                    color: var(--dark);
-                }
-            }
+        @media (min-width:720px) {
+            font-size: 24px;
         }
+    }
+    p{
+        color: var(--dark);
     }
 }

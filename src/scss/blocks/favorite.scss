@@ -93,76 +93,63 @@
     @media (min-width:1024px) {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+.favorite-section__item{
+    background-color: #FFFFFF;
+}
+.favorite-section__item-wrapper{
+    padding: 20px;
+}
 
+.favorite-section__item-title{
 
-    .favorite-section__item{
+    margin-top: 20px;
+    margin-bottom: 20px;
 
-        background-color: #FFFFFF;
+    h2{
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--dark_dark_blue);
+    }
+}
 
-        .favorite-section__item-wrapper{
-            padding: 20px;
+.favorite-section__specifications{
+
+    margin-bottom: 25px;
+
+    div{
+
+        display: flex;
+        justify-content: space-between;
+
+        &:not(:last-child){
+            margin-bottom: 5px;
+
         }
-        .favorite-section__picture{
-
-
-        }
-
-        .favorite-section__item-title{
-
-            margin-top: 20px;
-            margin-bottom: 20px;
-
-            h2{
-                font-size: 24px;
-                font-weight: 500;
-                color: var(--dark_dark_blue);
-            }
-        }
-
-        .favorite-section__specifications{
-
-            margin-bottom: 25px;
-
-            div{
-
-                display: flex;
-                justify-content: space-between;
-
-                &:not(:last-child){
-                    margin-bottom: 5px;
-
-                }
-                span{
-                    &:first-child{
-                        font-weight: 600;
-                        color: var(--dark);
-                    }
-                }
-            }
-        }
-
-        .favorite-section__info{
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .favorite-section__info-detail{
-
-            }
-            .favorite-section__info-price{
-
-                span{
-                    font-size: 18px;
-                    font-weight: 700;
-                    color: var(--dark_dark_blue);
-
-                    @media (min-width: 480px) {
-                        font-size: 24px;
-                    }
-                }
+        span{
+            &:first-child{
+                font-weight: 600;
+                color: var(--dark);
             }
         }
     }
 }
 
+.favorite-section__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favorite-section__info-price{
+
+    span{
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--dark_dark_blue);
+
+        @media (min-width: 480px) {
+            font-size: 24px;
+        }
+    }
+}

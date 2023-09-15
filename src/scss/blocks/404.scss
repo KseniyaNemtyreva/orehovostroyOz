@@ -6,21 +6,19 @@
 
     padding-top: 60px;
 
-    color: var(--red);
+    color: var(--red);    
+}
+.error__text-text{
+    font-size: 24px;
+    font-weight: 500;
+}
+.error__text-number{
+    text-align: center;
+    font-size: 150px;
+    font-weight: 700;
 
-    .error__text-text{
-        font-size: 24px;
-        font-weight: 500;
-    }
-    .error__text-number{
-        text-align: center;
-        font-size: 150px;
-        font-weight: 700;
-
-        margin-top: -60px;
-        margin-left: -25px;
-    }
-    
+    margin-top: -60px;
+    margin-left: -25px;
 }
 
 .error__picture-block{
